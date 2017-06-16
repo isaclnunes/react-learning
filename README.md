@@ -103,25 +103,25 @@ You can find the most recent version of this guide [here](https://github.com/fac
     ```
 
 - Object Literal Enhancement: 
-    is the opposite of destructuring. It is the process
-     of restructuring or putting back together. With 
-     object literal enhancement, we can grab variables
+    - is the opposite of destructuring. It is the process
+      of restructuring or putting back together. With 
+      object literal enhancement, we can grab variables
       from the global scope and turn them into an object.
 
 - The Spread Operator: (...)
-    # combines the contents of two arrays:
+    - combines the contents of two arrays:
     ```js
         var peaks = ["Tallac", "Ralston", "Rose"]
         var canyons = ["Ward", "Blackwood"]
         var tahoe = [...peaks, ...canyons]
     ```
-    # can be uses to get some, or the rest, of items in the array:
+    - can be uses to get some, or the rest, of items in the array:
     ```js
         var lakes = ["Donner", "Marlette", "Fallen Leaf", "Cascade"]
         var [first, ...rest] = lakes
         console.log(rest.join(", ")) // "Marlette, Fallen Leaf, Cascade"
     ```
-    # collect funtion arguments as an array:
+    - collect funtion arguments as an array:
     ```js
         function directions(...args) {
             var [start, ...remaining] = args
@@ -129,7 +129,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
             ...
         }
     ```
-    # can also be used for objects:
+    - can also be used for objects:
     ```js
         var morning = {
         breakfast: "oatmeal",
