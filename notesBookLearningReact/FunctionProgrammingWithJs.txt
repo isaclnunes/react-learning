@@ -1,0 +1,50 @@
+Functional Programming with JavaScript:
+
+# immutability:
+    let color_lawn = {
+        title: "lawn",
+        color: "#00FF00",
+        rating: 0
+    }
+
+    Non immutable:
+        function rateColor(color, rating) {
+            color.rating = rating
+            return color
+        } 
+
+        console.log(rateColor(color_lawn, 5).rating)     // 5
+        console.log(color_lawn.rating)                   // 5
+
+    Immutable:
+        var rateColor = function(color, rating) {
+            return Object.assign({}, color, {rating:rating})
+        } 
+
+        console.log(rateColor(color_lawn, 5).rating)      // 5
+        console.log(color_lawn.rating)                    // 4
+
+    - Notes:
+        Array.push is not immutable
+        Array.concat is immutable
+        Alternative use the ES6 spread operator:
+            const addColor = (title, list) => [...list, {title}]
+
+# Pure functions:
+    Take at least one argument and return a value or function. 
+    They do not cause side effects (changing global vars/dom).
+    The function should not change or mutate any of its arguments.
+    
+# Data transformations:
+    - functional programming is all about transforming data from one
+    form to another. We will produce transformed copies using
+    functions.
+
+    - Two core functions: Array.map and Array.reduce
+    - Array.filter is also immutable preferable to Array.pop or Array.splice
+
+    - reduce and reduceRight functions can be used to transform an array into 
+    any value, including a number, string, boolean, object or even function.
+        (reduceRight is the same as reduce but starts from the end of the array)
+
+    

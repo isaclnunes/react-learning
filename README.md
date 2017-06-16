@@ -68,7 +68,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
         We should avoid transpiling in the browser as it will slow
         down the application.
 
-ES6 Objects and Arrays:
+## ES6 Objects and Arrays:
 
 - Destructuring Assignment: Allows to use locally scope fields
     within an object and to declare which values will be used.
@@ -178,7 +178,7 @@ ES6 Objects and Arrays:
         }     
     ```
 
-- ES6 Modules:
+## ES6 Modules:
     A JavaScript module is a piece of reusable code that 
     can easily be incorporated into other JavaScript files.
     Until recently, the only way to work with modular 
