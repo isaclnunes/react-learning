@@ -188,13 +188,15 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Functional programming:
    - Immutability:
+   ```js
       let color_lawn = {
          title: "lawn",
          color: "#00FF00",
          rating: 0
       }
-      
-    * Non immutable:
+    ```
+
+    Non immutable:
 
     ```js
         function rateColor(color, rating) {
@@ -206,7 +208,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
         console.log(color_lawn.rating)                   // 5
     ```
 
-    * Immutable:
+    Immutable:
 
     ```js
         var rateColor = function(color, rating) {
@@ -216,7 +218,8 @@ You can find the most recent version of this guide [here](https://github.com/fac
         console.log(rateColor(color_lawn, 5).rating)      // 5
         console.log(color_lawn.rating)                    // 4
     ```
-    * Notes:
+    
+    Notes:
         Array.push is not immutable
         Array.concat is immutable
         Alternative use the ES6 spread operator:
