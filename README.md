@@ -188,14 +188,14 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Functional programming:
    - Immutability:
-   ```js
       let color_lawn = {
          title: "lawn",
          color: "#00FF00",
          rating: 0
       }
-    ```
+      
     * Non immutable:
+
     ```js
         function rateColor(color, rating) {
             color.rating = rating
@@ -205,7 +205,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
         console.log(rateColor(color_lawn, 5).rating)     // 5
         console.log(color_lawn.rating)                   // 5
     ```
+
     * Immutable:
+
     ```js
         var rateColor = function(color, rating) {
             return Object.assign({}, color, {rating:rating})
