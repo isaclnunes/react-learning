@@ -188,13 +188,13 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 ## Functional programming:
    - Immutability:
-   ```js
+```js
       let color_lawn = {
          title: "lawn",
          color: "#00FF00",
          rating: 0
       }
-    ```
+```
 
     Non immutable:
 
