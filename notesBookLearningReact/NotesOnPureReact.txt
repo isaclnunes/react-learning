@@ -1,0 +1,15 @@
+Two important libraries:
+   - React: library for creating views
+   - React DOM: actually renders the UI in the browser
+
+React elements:
+   - react elements are instructions for how the browser DOM should be created.
+   ex:
+   ```js
+      React.createElement("h1",null,"Test element")
+   ```
+   which during render get's converted to: <h1>Test element</h1>
+   to add id's and data types:
+   ```js
+      React.createElement("h1",{id:"theId", 'data-type':"title"},"Test element")
+   ```

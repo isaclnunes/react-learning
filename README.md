@@ -218,7 +218,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
         console.log(rateColor(color_lawn, 5).rating)      // 5
         console.log(color_lawn.rating)                    // 4
     ```
-    
+
     Notes:
         Array.push is not immutable
         Array.concat is immutable
@@ -230,7 +230,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
       They do not cause side effects (changing vars/dom).
       The functions should not change or mutate nay of its arguments.
 
-   - Data Transformtion:
+   - Data Transformation:
       * functional programming is all about transforming data from one
     form to another. We will produce transformed copies using
     functions.
