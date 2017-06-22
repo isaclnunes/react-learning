@@ -178,10 +178,66 @@ You can find the most recent version of this guide [here](https://github.com/fac
         }     
     ```
 
-## ES6 Modules:
+ - ES6 Modules:
     A JavaScript module is a piece of reusable code that 
     can easily be incorporated into other JavaScript files.
     Until recently, the only way to work with modular 
     JavaScript was to incorporate a library that could
     handle importing and exporting modules. Now, 
     with ES6, JavaScript itself supports modules.                      
+
+## Functional programming:
+   - Immutability:
+   ```js
+      let color_lawn = {
+         title: "lawn",
+         color: "#00FF00",
+         rating: 0
+      }
+    ```
+    * Non immutable:
+    ```js
+        function rateColor(color, rating) {
+            color.rating = rating
+            return color
+        } 
+
+        console.log(rateColor(color_lawn, 5).rating)     // 5
+        console.log(color_lawn.rating)                   // 5
+    ```
+    * Immutable:
+    ```js
+        var rateColor = function(color, rating) {
+            return Object.assign({}, color, {rating:rating})
+        } 
+
+        console.log(rateColor(color_lawn, 5).rating)      // 5
+        console.log(color_lawn.rating)                    // 4
+    ```
+    * Notes:
+        Array.push is not immutable
+        Array.concat is immutable
+        Alternative use the ES6 spread operator:
+            const addColor = (title, list) => [...list, {title}]
+
+   - Pure functions:
+      Take at least one argument and return a value or function.
+      They do not cause side effects (changing vars/dom).
+      The functions should not change or mutate nay of its arguments.
+
+   - Data Transformtion:
+      * functional programming is all about transforming data from one
+    form to another. We will produce transformed copies using
+    functions.
+       * Two core functions: Array.map and Array.reduce
+       * Array.filter is also immutable preferable to Array.pop or Array.splice
+       * reduce and reduceRight functions can be used to transform an array into any value, including a number, string, boolean, object or even function.(reduceRight is the same as reduce but starts from the end of the array)
+
+   - Recursion:
+      * Compose: takes functions and composes a new function ex:
+    ```js
+        const composedFunction = compose (
+            function1, 
+            function2
+        )
+    ```

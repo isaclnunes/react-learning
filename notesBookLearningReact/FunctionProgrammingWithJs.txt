@@ -47,4 +47,11 @@ Functional Programming with JavaScript:
     any value, including a number, string, boolean, object or even function.
         (reduceRight is the same as reduce but starts from the end of the array)
 
-    
+# Recursion:
+   - Compose: takes functions and composes a new function:
+   ex: 
+   ```js
+    const composedFunction = compose (
+        function1, 
+        function2
+    )
