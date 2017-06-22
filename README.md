@@ -197,8 +197,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ```
 
     Non immutable:
-
-    ```js
+```js
         function rateColor(color, rating) {
             color.rating = rating
             return color
@@ -206,18 +205,17 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
         console.log(rateColor(color_lawn, 5).rating)     // 5
         console.log(color_lawn.rating)                   // 5
-    ```
+```
 
     Immutable:
-
-    ```js
+```js
         var rateColor = function(color, rating) {
             return Object.assign({}, color, {rating:rating})
         } 
 
         console.log(rateColor(color_lawn, 5).rating)      // 5
         console.log(color_lawn.rating)                    // 4
-    ```
+```
 
     Notes:
         Array.push is not immutable
@@ -240,9 +238,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
    - Recursion:
       * Compose: takes functions and composes a new function ex:
-    ```js
+```js
         const composedFunction = compose (
             function1, 
             function2
         )
-    ```
+```
